@@ -1,0 +1,18 @@
+.wrap {
+    display: inline;
+    background-color: black;
+}
+
+.wrap-logo {
+    display: inline-block;
+    padding-right: 50%;
+}
+
+.header-right-wrap {
+    display: inline-block;
+}
+
+.btn-item {
+    display: inline-block;
+    padding: auto;
+}
