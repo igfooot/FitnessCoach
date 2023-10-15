@@ -16,3 +16,79 @@
     display: inline-block;
     padding: auto;
 }
+
+.check-box {
+    display: inline-block;
+}
+
+input[id="icon"] {
+    display: none;
+}
+
+input[id="icon"] + label {
+    display: block;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[id="icon"] + label > span {
+    position: absolute;
+    display:block;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background:#000;
+    transition: all 0.35s;
+    z-index:2;
+}
+
+input[id="icon"] + label > span:nth-child(1){
+    top: 0;
+}
+
+input[id="icon"] + label > span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="icon"] + label > span:nth-child(3){
+    bottom: 0px;
+}
+
+input[id="icon"]:checked + label > span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+
+input[id="icon"]:checked + label > span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id="icon"]:checked + label > span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+
+
+input[id="icon"] + label + #hamburger-menu {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background: #333;
+    padding: 60px 25px 25px 25px;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 1;
+    transition: all 0.35s;
+}
+
+#icon:checked + label + #hamburger-menu {
+    left:0px;
+}
+
+#icon:checked + label + #hamburger-menu > ul > li > a {
+    color: white;
+
+}
